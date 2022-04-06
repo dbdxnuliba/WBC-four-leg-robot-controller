@@ -562,10 +562,10 @@ Eigen::Vector3d FloatingBasedDynamics::getFootVelInGravityFrame(int leg_id, Eige
                                                                 Eigen::Vector3d single_leg_joint_vel,
                                                                 Eigen::Vector3d body_euler_angle)
 {
-    Eigen::Matrix3d jacobian = getContactJacobianInGravityFrame(leg_id, body_euler_angle,
+    Eigen::MatrixXd jacobian = getContactJacobianInGravityFrame(leg_id, body_euler_angle,
                                                                 single_leg_joint_pos);
 
-    return jacobian * single_leg_joint_vel;
+    return jacobian.block(0, 3 * leg_id + 6, 3, 3) * single_leg_joint_vel;
 }
 
 Eigen::Vector3d FloatingBasedDynamics::getJointAngleFromFootPosInGravityFrame(int leg_id,
