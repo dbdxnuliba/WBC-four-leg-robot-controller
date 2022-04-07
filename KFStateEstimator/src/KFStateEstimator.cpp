@@ -43,7 +43,7 @@ KFStateEstimator::KFStateEstimator(double dt, double swing_leg_vel_noise, double
     for (int leg_id = 0; leg_id < 4; leg_id++)
     {
         C.block(3 * leg_id, 0, 3, 3) = Eigen::MatrixXd::Identity(3, 3) * (-1);
-        C.block(3 * leg_id, 6, 3, 3).setIdentity();
+        C.block(3 * leg_id, 6 + 3 * leg_id, 3, 3).setIdentity();
         C.block(3 * leg_id + 12, 3, 3, 3) = Eigen::MatrixXd::Identity(3, 3) * (-1);
     }
 
