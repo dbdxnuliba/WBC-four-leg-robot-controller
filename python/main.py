@@ -131,7 +131,7 @@ while current_time <= 1000:
 
 
 
-        current_time += 5* time_step
+        current_time += 1* time_step
 
 
 
