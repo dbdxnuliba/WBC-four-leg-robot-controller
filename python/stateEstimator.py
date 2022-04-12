@@ -3,7 +3,7 @@ import KFStateEstimator
 
 class StateEstimator:
     def __init__(self, robot):
-        self._state_estimator = KFStateEstimator.KFStateEstimator(0.005, 1e10, 1e-4)
+        self._state_estimator = KFStateEstimator.KFStateEstimator(0.001, 1e10, 1e-4)
         self._robot = robot
 
     def run(self, current_time):
