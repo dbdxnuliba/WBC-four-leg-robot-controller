@@ -6,14 +6,14 @@ import math
 alpha = 1e-5
 friction_coeff = 0.4
 
-kp_ori = 1.0
-kd_ori = 1.0
+kp_ori = 100.0
+kd_ori = 10.0
 
-kp_pos = 1.0
-kd_pos = 1.0
+kp_pos = 100.0
+kd_pos = 10.0
 
-kp_foot = 1.0
-kd_foot = 1.0
+kp_foot = 100.0
+kd_foot = 10.0
 
 weights = [20.0, 20.0, 5.0, 1.0, 1.0, 0.2]
 
