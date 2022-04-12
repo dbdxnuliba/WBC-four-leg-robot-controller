@@ -352,7 +352,7 @@ class Robot:
                                                            forces=desired_tau)
 
     def step(self):
-        for i in range(5):
+        for i in range(1):
             self.stepJointServo()
             self._pybullet_interface.stepSimulation()
 
