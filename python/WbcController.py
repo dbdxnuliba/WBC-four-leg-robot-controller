@@ -12,7 +12,7 @@ kd_ori = 10.0
 kp_pos = 100.0
 kd_pos = 10.0
 
-kp_foot = 100.0
+kp_foot = 500.0
 kd_foot = 10.0
 
 weights = [20.0, 20.0, 5.0, 1.0, 1.0, 0.2]
